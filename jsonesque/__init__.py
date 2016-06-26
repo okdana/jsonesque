@@ -16,7 +16,7 @@ Heavily based on JSON.minify:
 from jsonesque.process import *
 
 __name__         = 'jsonesque'
-__description__  = 'A pre-processor to normalise and minify JSON-like strings into valid JSON'
+__description__  = 'Normalise and minify JSON-like strings into valid JSON'
 __url__          = 'https://github.com/okdana/jsonesque/'
 __author__       = 'dana geier'
 __author_email__ = 'dana@dana.is'
