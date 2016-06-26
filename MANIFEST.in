@@ -1,0 +1,4 @@
+include *.py
+include pypi_description.rst
+include README.md
+
