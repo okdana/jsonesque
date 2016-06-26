@@ -35,10 +35,10 @@ release: clean
 	# Check for clean working directory
 	[[ -z "$$( git status --porcelain 2>&1 )" ]] || echo 'Unclean working directory:'
 	[[ -z "$$( git status --porcelain 2>&1 )" ]] || git status --porcelain
-	[[ -z "$$( git status --porcelain 2>&1 )" ]] || true
+	[[ -z "$$( git status --porcelain 2>&1 )" ]]
 	# Check for existing tag for this version
-	if git tag --list | grep -xF --color=never 'v$(VERSION)'; then echo 'Tag already exists:'; else true; fi
-	if git tag --list | grep -xF --color=never 'v$(VERSION)'; then false; else true; fi
+	if git tag --list | grep -qxF --color=never 'v$(VERSION)'; then echo 'Tag already exists:'; else true; fi
+	if git tag --list | grep -xF --color=never 'v$(VERSION)'; then exit 1; else true; fi
 	# Create tag
 	git tag -a 'v$(VERSION)' -m 'version $(VERSION)'
 	git push --tags
