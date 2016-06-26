@@ -20,6 +20,6 @@ __description__  = 'Normalise and minify JSON-like strings into valid JSON'
 __url__          = 'https://github.com/okdana/jsonesque/'
 __author__       = 'dana geier'
 __author_email__ = 'dana@dana.is'
-__version__      = '0.1.0'
+__version__      = '0.1.1'
 __license__      = 'MIT'
 
